@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Chrome Extension</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+
+  <body>
+    <header></header>
+
+    <main>
+      <div class="action-inputs">
+        <label for="upload-file">
+          <button id="upload-file-btn" class="animated">
+            <div class="svg-wrapper-1">
+              <div class="svg-wrapper">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path
+                    fill="currentColor"
+                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <span class="btn-text">Upload File</span>
+          </button>
+
+          <input
+            type="file"
+            accept=".pdf,.doc,.txt,.png,.jpg"
+            id="upload-file"
+          />
+        </label>
+      </div>
+
+      <hr />
+
+      <button style="width: 100%" id="summarize_all">Summarize Page</button>
+
+      <div class="options">
+        <button type="button" id="pause-btn">Pause</button>
+
+        <button id="stop-btn">Stop</button>
+        <button id="options-toggle-btn">Options</button>
+        <div class="options__inputs">
+          <label for="voice">
+            <p>Voice</p>
+            <select id="voice">
+              <option value="0">Voice 1</option>
+              <option value="1">Voice 2</option>
+              <option value="2">Voice 3</option>
+              <option value="3" selected>Voice 4</option>
+              <option value="4">Voice 5</option>
+            </select>
+          </label>
+
+          <label for="speed">
+            <p>Speed</p>
+            <input
+              type="range"
+              min="0"
+              max="2"
+              id="rate"
+              value="1"
+              step="0.1"
+            />
+          </label>
+
+          <label for="volume">
+            <p>Volume</p>
+            <input
+              type="range"
+              min="0"
+              max="1"
+              id="volume"
+              value="1"
+              step="0.1"
+            />
+          </label>
+
+          <label for="show-txt-checkbox">
+            <p>Show Summary</p>
+            <input type="checkbox" id="show-txt-checkbox" />
+          </label>
+        </div>
+      </div>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

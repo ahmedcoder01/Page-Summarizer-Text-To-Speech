@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Readisten Audio Summarizer",
+  "version": "0.1.0",
+  "description": "TTS Summarizer",
+  "icons": {
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Summary Tts",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_idle",
+      "js": ["contentScript.js", "components.js"],
+      "css": ["components.css"]
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+/* normalize css starts here */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* normalize css ends here */
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif;
+  color: #222;
+}
+
+body {
+  width: 250px;
+  height: 150px;
+}
+
+header img {
+  width: 154px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+main .action-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+main .action-inputs input {
+  display: none !important;
+}
+
+main .control-options {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main .control-options button {
+  padding: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #010101;
+  color: white;
+}
+
+/* OPTIONS */
+.options {
+  margin: 10px 0;
+}
+button {
+  border: none;
+  padding: 7px 15px;
+  color: #fff;
+  background: #010101;
+  outline: none;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.options .options__inputs {
+  display: none;
+}
+.options .options__inputs.active {
+  display: block;
+}
+.options label {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+}
+.options label p {
+  text-align: left;
+  font-size: 14px;
+}
+input[type='range'] {
+  accent-color: #010101;
+}
+select {
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 0 2px;
+  padding: 3px;
+}
+
+/* From uiverse.io by @adamgiebl */
+button.animated {
+  font-family: inherit;
+  font-size: 16px;
+  background: #010101;
+  color: white;
+  padding: 0.7em 5rem;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+button.animated.success {
+  background: #010101;
+  pointer-events: none;
+}
+
+button.animated span {
+  display: block;
+  margin-left: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+button.animated svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button.animated:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button.animated:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button.animated:hover span {
+  transform: translateX(3em);
+}
+
+button.animated:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
