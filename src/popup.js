@@ -25,8 +25,8 @@ async function extractFileText() {
   const options = {
     method: 'POST',
     headers: {
-      'X-RapidAPI-Key': 'ae3e795ee7msh35e5ba83e704f20p12babcjsnc1e1876e52a7',
-      'X-RapidAPI-Host': 'text-analysis12.p.rapidapi.com',
+      'X-RapidAPI-Key': '',
+      'X-RapidAPI-Host': '',
     },
     body: data,
   };
